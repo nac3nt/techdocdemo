@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Share+Tech+Mono&display=swap');
+
+body, html {
+    margin: 0;
+    height: 100vh;
+    font-family: "Share Tech Mono";
+
+    /* 3390ff */
+    --color1: rgb(25, 113, 255);
+    --color2: white;
+    --color3: #838383;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 350px auto;
+    grid-template-areas: "nav page";
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.selector::selection {
+    color:var(--color2);
+    background-color: var(--color1);
+}
+
+.selector::-moz-selection {
+    color:var(--color2);
+    background-color: var(--color1);
+}
+
+.output::selection {
+    color:var(--color2);
+    background-color: var(--color1);
+}
+
+.output::-moz-selection {
+    color:var(--color2);
+    background-color: var(--color1);
+}
+
+code::selection {
+    padding: 5px;
+    color:var(--color2);
+    background-color: var(--color1);
+}
+
+code::-moz-selection {
+    padding: 5px;
+    color:var(--color2);
+    background-color: var(--color1);
+}
+
+strong::selection {
+    color:var(--color2);
+    background-color: var(--color1);
+}
+
+strong::-moz-selection {
+    color:var(--color2);
+    background-color: var(--color1);
+}
+
+em::selection {
+    color:var(--color2);
+    background-color: var(--color1);
+}
+
+em::-moz-selection {
+    color:var(--color2);
+    background-color: var(--color1);
+}
+
+#main-header {
+    display: none;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+#main-header h1 {
+    font-family: "Major Mono Display";
+    font-weight: 100;
+    display: grid;
+    margin-left: 2rem;
+    border-left: 2px solid var(--color2);
+    padding-left: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+#navbar {
+    display: grid;
+    grid-area: nav;
+    grid-template-rows: auto 1fr;
+    background-color: var(--color1);
+    color: var(--color2);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+#navbar header {
+    display: grid;
+    align-items: start;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    justify-content: start;
+}
+
+#navbar header h1 {
+    font-family: "Major Mono Display";
+    font-weight: 100;
+    display: grid;
+    margin-left: 45px;
+    border-left: 2px solid var(--color2);
+    padding-left: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#topics {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: grid;
+}
+
+#topics a {
+    text-decoration: none;
+    color: var(--color2);
+    padding-left: 45px;
+    display: grid;
+    place-content: center start;
+    font-size: clamp(1rem, 1.1rem, 1.1rem);
+}
+
+#topics a:hover {
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+#page {
+    grid-area: page;
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+#main-doc {
+    display: grid;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.main-section {
+    padding-top: 50px;
+}
+
+#main-doc:last-child {
+    padding-bottom: 50px;
+}
+
+#main-doc a {
+    text-decoration: none;
+    outline: 1px solid var(--color1);
+    color: var(--color1);
+    padding: 5px;
+}
+
+#main-doc a:hover {
+    text-decoration: none;
+    background-color: var(--color1);
+    color: var(--color2);
+    padding: 5px;
+}
+
+.main-section header {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+code {
+    display: inline-block;
+    font-family: "Share Tech Mono";
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: var(--color2);
+    color: var(--color3);
+    outline: 1px solid var(--color3);
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 35px;
+}
+
+p, li {
+    line-height: 35px;
+}
+
+.output {
+    display: inline-block;
+    outline: 1px solid var(--color1);
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1023px), (max-height: 500px) {
+    .container {
+        display: grid;
+        grid-template-columns: 0 1fr;
+        grid-template-rows: auto;
+        height: 100vh;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    #page {
+        display: grid;
+        grid-template-rows: auto 1fr;
+    }
+
+    #main-header {
+        display: grid;
+    }
+}
