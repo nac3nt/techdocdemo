@@ -181,10 +181,10 @@
                       because the scope of x is the function (or global context) within which x is declared, 
                       not the block, which in this case is an if statement.
                     </p>
-                    <p class="selector"><code>if (true) { var x = 5; } console.log(x);</code> <span class="output">// 5</span><br>
+                    <p class="selector"><code>if (true) { var x = 5; } console.log(x);</code> <span class="output">5</span><br>
                       This behavior changes, when using the let declaration introduced in ECMAScript 2015.
                     </p>
-                    <p class="selector"><code>if (true) { let y = 5; } console.log(y);</code> <span class="output">// ReferenceError: y is not defined</span></p>
+                    <p class="selector"><code>if (true) { let y = 5; } console.log(y);</code> <span class="output">ReferenceError: y is not defined</span></p>
                   </article>
                 </section>
                 <section class="main-section" id="Global_variables">
